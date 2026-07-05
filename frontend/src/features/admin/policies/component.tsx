@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
@@ -384,7 +384,7 @@ export default function CompanyPoliciesPage() {
           { label: 'Pending Acks', value: sum.pendingAcknowledgements, icon: AlertCircle, accent: '#F43F5E', sub: 'Awaiting signatures' },
           { label: 'Compliance Rate', value: `${sum.overallComplianceRate}%`, icon: TrendingUp, accent: '#10B981', sub: 'Target pool compliance' }
         ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
       </div>
 
