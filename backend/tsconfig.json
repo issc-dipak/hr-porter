@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@/app/*": ["./src/*"],
+      "@/app/api/models/*": ["./src/models/*"],
+      "@/backend/*": ["./src/*"],
+      "next/server": ["./src/next-mock.ts"]
+    }
+  },
+  "include": ["src/**/*"]
+}
