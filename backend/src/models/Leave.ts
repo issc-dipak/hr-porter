@@ -12,6 +12,10 @@ export interface ILeave extends Document {
   branchId?: string;
   status: string;
   companyName: string;
+  startDate?: string;
+  endDate?: string;
+  rejectReason?: string;
+  rejectionReason?: string;
   createdAt: Date;
   updatedAt: Date;
 }
