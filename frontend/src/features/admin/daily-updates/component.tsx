@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { 
@@ -239,7 +239,7 @@ export default function DailyUpdatesAnalytics({ addNotification = () => {} }: Ad
           { label: 'Compliance Rate', value: `${totalEmployees > 0 ? Math.round((updatedToday / totalEmployees) * 100) : 100}%`, icon: Clock, accent: '#10B981', sub: 'Submission percentage' },
           { label: 'Pending Review', value: totalPending, icon: AlertCircle, accent: '#F59E0B', sub: 'Pending admin approval' }
         ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
       </div>
 
