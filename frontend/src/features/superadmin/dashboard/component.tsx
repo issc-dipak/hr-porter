@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { 
@@ -390,7 +390,7 @@ export default function SuperAdminDashboard({ addNotification, initialTab = 'das
               { label: 'Platform MRR', value: `₹${(metrics?.mrr || 0).toLocaleString()}`, icon: CreditCard, accent: '#06B6D4', sub: `ARR: ₹${(metrics?.arr || 0).toLocaleString()}`, subColor: 'text-emerald-500' },
               { label: 'Trial Conversion / Churn', value: `${metrics?.trialConversionRate || 0}%`, icon: ShieldCheck, accent: '#3B82F6', sub: `Churn Rate: ${metrics?.churnRate || 0}%`, subColor: 'text-rose-500' }
             ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
           </div>
 

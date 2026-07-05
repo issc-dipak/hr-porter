@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
@@ -134,7 +134,7 @@ export default function SalaryManagementTab({ userRole = 'HR' }: SalaryManagemen
           { label: 'Average Monthly CTC', value: fmtK(avgSalary), sub: `${fmtK(avgSalary * 12)} avg annual`, icon: BarChart3, accent: '#8B5CF6' },
           { label: 'Pending Revisions', value: pendingRevisions.toString(), sub: 'Awaiting approval', icon: Clock, accent: '#F59E0B' },
         ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
       </div>
 

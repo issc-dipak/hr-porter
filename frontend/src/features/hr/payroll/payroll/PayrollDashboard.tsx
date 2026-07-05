@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { 
@@ -410,7 +410,7 @@ export default function PayrollDashboard({ dashboardStats, wallet, fetchWallet, 
             accent: '#10B981'
           }
         ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
       </div>
 

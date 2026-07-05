@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { 
@@ -963,7 +963,7 @@ export default function HelpDeskPage({ userRole, profile, addNotification }: Hel
                     { label: 'Closed Tickets', value: analytics?.closedTickets || 0, icon: CheckCircle2, accent: '#10B981', sub: 'Resolved queries' },
                     { label: 'Urgent / High', value: analytics?.highPriorityTickets || 0, icon: ShieldAlert, accent: '#F43F5E', sub: 'Critical priority status' }
                   ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
                 </div>
 

@@ -1725,7 +1725,7 @@ export default function ExpensesPage() {
                     sub: 'Unresolved payment issues'
                   }
                 ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
               </div>
 
