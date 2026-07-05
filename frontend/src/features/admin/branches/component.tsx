@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
@@ -256,7 +256,7 @@ export default function BranchesPage() {
           { title: 'Active Branches', value: activeBranchesCount, desc: 'Accepting active workflows', icon: CheckCircle, accent: '#10B981' },
           { title: 'Total Branch Mapped Staff', value: totalEmployeesCount, desc: 'Active personnel directory', icon: Users, accent: '#8B5CF6' }
         ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.title} value={stat.value} sub={stat.desc} accent={stat.accent} />
         ))}
       </div>
 
