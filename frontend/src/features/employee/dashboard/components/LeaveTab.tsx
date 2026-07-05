@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import React from 'react';
-import { Calendar, Plus, Briefcase } from 'lucide-react';
+import { Calendar, Plus, Briefcase, CheckCircle } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { PastelStatCard } from '@/components/ui/PastelStatCard';
 import { motion } from 'framer-motion';
@@ -75,22 +75,25 @@ export function LeaveTab({
                 label: 'Yearly Allowance', 
                 value: `${totalLeavesLimit} Days`, 
                 accent: '#3B82F6',
-                sub: 'Annual holiday pool'
+                sub: 'Annual holiday pool',
+                icon: Calendar
               },
               { 
                 label: 'Leaves Approved', 
                 value: `${approvedCount} Days`, 
                 accent: '#10B981',
-                sub: 'Days approved by HR'
+                sub: 'Days approved by HR',
+                icon: CheckCircle
               },
               { 
                 label: 'Remaining Balance', 
                 value: `${remainingLeaves} Days`, 
                 accent: '#8B5CF6',
-                sub: 'Available leaves to apply'
+                sub: 'Available leaves to apply',
+                icon: Briefcase
               },
             ].map((stat, idx) => (
-          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub || stat.desc} accent={stat.accent} />
+          <PastelStatCard key={idx} icon={stat.icon} label={stat.label} value={stat.value} sub={stat.sub} accent={stat.accent} />
         ))}
           </div>
 
