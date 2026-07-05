@@ -200,8 +200,23 @@ router.post('/invite', handleWebRoute(async (req: Request) => {
       branchId
     });
 
-    // Send invitation email
-    const setupLink = `http://localhost:3000/onboarding/${inviteToken}`;
+    // Determine the frontend URL dynamically from the request headers or fallback config
+    let frontendUrl = '';
+    const originHeader = req.headers.get('origin');
+    const refererHeader = req.headers.get('referer');
+    if (originHeader) {
+      frontendUrl = originHeader;
+    } else if (refererHeader) {
+      try {
+        frontendUrl = new URL(refererHeader).origin;
+      } catch (_) {
+        frontendUrl = refererHeader;
+      }
+    } else {
+      frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+    }
+    frontendUrl = frontendUrl.replace(/\/$/, '');
+    const setupLink = `${frontendUrl}/onboarding/${inviteToken}`;
     
     try {
       await sendEmail({
