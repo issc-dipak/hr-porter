@@ -50,16 +50,10 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
   : ['http://localhost:3000', 'http://localhost:5173'];
 
 app.use(cors({
-  origin: isProd 
-    ? (origin, callback) => {
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes('*')) {
-          callback(null, true);
-        } else {
-          callback(new Error('Not allowed by CORS'));
-        }
-      }
-    : '*',
+  origin: (origin, callback) => {
+    // Dynamically allow the requesting origin to support credentials (which doesn't allow '*')
+    callback(null, true);
+  },
   credentials: true
 }));
 
