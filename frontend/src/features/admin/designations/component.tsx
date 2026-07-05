@@ -338,7 +338,7 @@ export default function DesignationsPage() {
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 pt-4 text-xs">
+            <form onSubmit={handleFormSubmit} className="space-y-4 pt-4 text-xs">
               <div className="space-y-1">
                 <label className="text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest block">Designation Name *</label>
                 <input
