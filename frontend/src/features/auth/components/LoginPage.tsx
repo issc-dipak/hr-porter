@@ -104,8 +104,8 @@ const ROLE_THEMES: Record<string, {
 };
 
 export default function LoginPage({ onLogin, onSwitchToSignup, onSwitchToForgot, onUnverifiedUser }: LoginPageProps) {
-  const [email, setEmail] = useState('superadmincore@gmail.com');
-  const [password, setPassword] = useState('md181023');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [role, setRole] = useState('Super Admin');
   const [showPass, setShowPass] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
